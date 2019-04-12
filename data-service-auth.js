@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 var Schema = mongoose.Schema;
+
 var userSchema = new Schema({
     "userName": {
         "type": String,
@@ -14,11 +15,11 @@ var userSchema = new Schema({
     }]
 });
 
-var User;
+let User;
 
 module.exports.initialize = function(){
     return new Promise(function(resolve, reject){
-        let db = mongoose.createConnection("mongodb://hbtrung:concac93@ds047762.mlab.com:47762/web322_a6");
+        let db = mongoose.createConnection("mongodb://hbtrung:hbtrung93@ds047762.mlab.com:47762/web322_a6");
 
         db.on('error', (err)=>{
             reject(err);
