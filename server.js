@@ -1,4 +1,4 @@
- const data = require("./data-service.js");
+const data = require("./data-service.js");
 const express = require("express");
 const app = express();
 const path = require("path");
